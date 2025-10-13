@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Office 365 - Online" href="online.html" /><link rel="prev" title="IBM Envizi for Excel Documentation" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Use" href="use.html" /><link rel="prev" title="Windows" href="windows.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Installation - IBM Envizi for Excel documentation</title>
+        <title>Mac - IBM Envizi for Excel documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -200,10 +200,10 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Installation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="installation.html">Installation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="online.html">Office 365 - Online</a></li>
 <li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mac.html">Mac</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Mac</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="use.html">Use</a></li>
@@ -228,7 +228,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="_sources/installation.rst.txt" title="View this page">
+  <a class="muted-link" href="_sources/mac.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -248,92 +248,50 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
-<section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
-<p>Before installing the add-in, ensure the following requirements are met:</p>
-<ul class="simple">
-<li><p>Microsoft Excel (Office 365 Online, Mac or Windows)</p></li>
-<li><p>Active internet connection</p></li>
-<li><p>API credentials (<code class="docutils literal notranslate"><span class="pre">apiKey</span></code>, <code class="docutils literal notranslate"><span class="pre">tenantId</span></code>, <code class="docutils literal notranslate"><span class="pre">orgId</span></code>), are available on the <a class="reference external" href="https://www.app.ibm.com/envizi/emissions-api-home/overview?cuiURL=%2Femissions-api-home%2Foverview">Overview Dashboard</a> after <a class="reference external" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-53999">sign up</a>.</p></li>
-</ul>
-</section>
-<section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
-<p>In order to use <strong>IBM Envizi Emissions API</strong> for Excel, there are two options to install:</p>
+          <section id="mac">
+<h1>Mac<a class="headerlink" href="#mac" title="Link to this heading">¶</a></h1>
+<p>This guide explains how to install the <strong>IBM Envizi Emissions API</strong> add-in from an XML manifest file on
+<strong>macOS</strong>.</p>
 <ol class="arabic simple">
-<li><p>Download from the AppSource Store (coming soon)</p></li>
-<li><p>Sideload a manifest.xml file</p></li>
+<li><p>Open <cite>Finder</cite></p></li>
+<li><p>On the top menu bar, click <cite>Go</cite></p></li>
+<li><p>From the drop down menu that appears, click <cite>Go to folder</cite></p></li>
 </ol>
-<section id="microsoft-appsource-store">
-<h3>Microsoft AppSource Store<a class="headerlink" href="#microsoft-appsource-store" title="Link to this heading">¶</a></h3>
-<p>Coming soon.</p>
-</section>
-<section id="sideload">
-<h3>Sideload<a class="headerlink" href="#sideload" title="Link to this heading">¶</a></h3>
-<section id="download-the-manifest-file">
-<h4>Download the Manifest File<a class="headerlink" href="#download-the-manifest-file" title="Link to this heading">¶</a></h4>
-<p>The manifest file is available at the following location:</p>
-<p><a class="reference external" href="https://plugins.app.ibm.com/excel-addin/manifest.xml">manifest.xml</a></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If your browser displays the XML content instead of downloading the file, select <strong>File</strong> → <strong>Save As</strong>, name the file <strong>manifest.xml</strong>, and save it to your preferred location.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/Users/&lt;username&gt;/Library/Containers/com.microsoft.Excel/Data/Documents
+</pre></div>
 </div>
-</section>
-<section id="platform-specific-installation">
-<h4>Platform-Specific Installation<a class="headerlink" href="#platform-specific-installation" title="Link to this heading">¶</a></h4>
-<p>The following sections contain instructions for sideloading the Add-in in different environments, please choose the one that is relevant:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="online.html">Office 365 - Online</a></li>
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mac.html">Mac</a></li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>&lt;username&gt; should be replaced with the name of your Mac user</p></li>
 </ul>
 </div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Note that Excel custom functions are available on the following platforms:</p>
+<ol class="arabic simple" start="4">
+<li><p>If the <cite>wef</cite> folder does not exist, right-click and create a folder called <cite>wef</cite></p></li>
+<li><p>Click on the <cite>wef</cite> folder to enter it</p></li>
+<li><p>Place your downloaded <cite>manifest.xml</cite> file in the <cite>wef</cite> folder</p></li>
+</ol>
+<img alt="Placing manifest file in Mac directory" class="align-center" src="_images/placing-wef-file.png" />
+<p>After successfully placing the manifest file, the add-in will appear in the Developer Add-in section.</p>
+<img alt="Developer Add-in in Excel" class="align-center" src="_images/developer-add-in.png" />
+<p>For more information please see the <a class="reference external" href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/sideload-an-office-add-in-on-mac">Microsoft 365 Office Add-in Mac</a> documentation for Mac.</p>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Office on the web</p></li>
 <li><dl class="simple">
-<dt>Office on Windows</dt><dd><ul>
-<li><p>Microsoft 365 subscription</p></li>
-<li><p>Retail perpetual <strong>Office 2016 and later</strong></p></li>
-<li><p>Volume-licensed perpetual <strong>Office 2021 and later</strong></p></li>
+<dt><strong>Add-in not appearing</strong></dt><dd><ul>
+<li><p>Make sure the manifest file is placed in the correct directory</p></li>
+<li><p>Ensure Excel has been restarted after placing the manifest file</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Office on Mac</p></li>
 </ul>
-<p>Excel custom functions aren’t currently supported in the following:</p>
-<ul class="simple">
-<li><p>Office on iPad</p></li>
-<li><p>Volume-licensed perpetual versions of <strong>Office 2019 or earlier</strong> on Windows</p></li>
-</ul>
-<p>For more information, see <a class="reference external" href="https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview">Supported platforms</a>.</p>
-</div>
 </section>
-</section>
-</section>
-<section id="calculation-mode-tip">
-<h2>Calculation Mode Tip<a class="headerlink" href="#calculation-mode-tip" title="Link to this heading">¶</a></h2>
-<p>After installation, change the calculation mode to <strong>Manual</strong> to prevent unnecessary API calls:</p>
-<ol class="arabic simple">
-<li><p>Go to <strong>Formulas → Calculation Options</strong>.</p></li>
-<li><p>Select <strong>Manual</strong>.</p></li>
-</ol>
-<img alt="Manual calculation mode in Excel" class="align-center" src="_images/calculation.png" />
-<ol class="arabic simple" start="3">
-<li><p>To recalculate a formula in manual calculation mode either press <strong>F9</strong> or do the following:</p>
-<ul class="simple">
-<li><p>Select the cell</p></li>
-<li><p>Press F2 (this puts the cell into edit mode)</p></li>
-<li><p>Press Enter</p></li>
-</ul>
-</li>
-</ol>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
+<p>After installation, please refer to the <a class="reference internal" href="installation.html"><span class="doc">Calculation Mode Tip</span></a> section for optimizing your Excel configuration.</p>
+<p>Please follow <a class="reference internal" href="use.html"><span class="doc">Usage</span></a> documentation for next steps.</p>
 </section>
 </section>
 
@@ -342,23 +300,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="online.html">
+          <a class="next-page" href="use.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Office 365 - Online</div>
+                <div class="title">Use</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="windows.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Windows</div>
                 
               </div>
             </a>
@@ -392,18 +350,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#install">Install</a><ul>
-<li><a class="reference internal" href="#microsoft-appsource-store">Microsoft AppSource Store</a></li>
-<li><a class="reference internal" href="#sideload">Sideload</a><ul>
-<li><a class="reference internal" href="#download-the-manifest-file">Download the Manifest File</a></li>
-<li><a class="reference internal" href="#platform-specific-installation">Platform-Specific Installation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#calculation-mode-tip">Calculation Mode Tip</a></li>
+<li><a class="reference internal" href="#">Mac</a><ul>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#next-steps">Next Steps</a></li>
 </ul>
 </li>
 </ul>
