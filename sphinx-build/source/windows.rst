@@ -1,15 +1,12 @@
-=======================
-Installation on Windows
-=======================
+=======
+Windows
+=======
 
 This guide explains how to install an **IBM Envizi Emissions API** add-in from an XML manifest file on
 **Windows** using the *Trusted Add-in Catalogs* method.
 
-Prerequisites
--------------
-
-- Microsoft Excel 2021 or later installed on Windows
-- Access to the XML manifest file (``manifest.xml``)
+.. important::
+   Requires Microsoft Excel 2021 or later
 
 Step 1: Locate Your Manifest File
 ---------------------------------
@@ -135,4 +132,10 @@ Troubleshooting
 - **Multiple add-ins**
    - If you have multiple manifest files, we recommend placing them in separate folders to avoid conflicts.
 
-Please follow :doc:`Installation </installation>` documentation for next steps.
+Next Steps
+----------
+
+After installation, please refer to the :doc:`Calculation Mode Tip </installation>` section for optimizing your Excel configuration.
+
+Please follow :doc:`Usage </use>` documentation for next steps.
+
