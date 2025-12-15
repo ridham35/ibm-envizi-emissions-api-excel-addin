@@ -22,6 +22,7 @@ language = 'en'
 # Source file suffix
 source_suffix = {
     '.rst': 'restructuredtext',
+    '.md': 'markdown',
 }
 
 # The master document
@@ -29,7 +30,8 @@ master_doc = 'index'
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode'
+    'sphinx.ext.viewcode',
+    'myst_parser'
 ]
 
 templates_path = ['_templates']

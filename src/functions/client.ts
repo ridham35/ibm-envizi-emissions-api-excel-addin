@@ -1,6 +1,6 @@
 // Copyright IBM Corp. 2025
 
-import { Client , ClientConfig } from "emissions-api-sdk";
+import { Client, ClientConfig } from "emissions-api-sdk";
 
 import { getApiUrl } from "../common/env";
 import {
@@ -14,6 +14,7 @@ async function getClientConfig(apiCredentials?: ApiCredentials): Promise<ClientC
   if (!resolvedApiCredentials) {
     resolvedApiCredentials = await loadApiCredentialsFromStorage();
     if (!resolvedApiCredentials) {
+      Office.addin.showAsTaskpane();
       throw new CustomFunctions.Error(
         CustomFunctions.ErrorCode.notAvailable,
         "Enter your credentials in the task pane."
@@ -26,7 +27,7 @@ async function getClientConfig(apiCredentials?: ApiCredentials): Promise<ClientC
     apiKey: resolvedApiCredentials.apiKey,
     clientId: resolvedApiCredentials.tenantId,
     orgId: resolvedApiCredentials.orgId,
-    isExcelAddIn: true
+    isExcelAddIn: true,
   };
   return config;
 }

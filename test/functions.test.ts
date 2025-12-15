@@ -3,6 +3,7 @@ import * as api from "../src/functions/functions"
 import { genericApiCall } from "../src/functions/generic-api-call";
 import { factorSearch } from "../src/functions/factorSearchHelper";
 import { factorHelper } from "../src/functions/factorHelper";
+import { handleTypesFunction } from "../src/functions/types-handler";
 
 jest.mock("../src/functions/generic-api-call", () => ({
   genericApiCall: jest.fn(),
@@ -14,6 +15,10 @@ jest.mock("../src/functions/factorSearchHelper", () => ({
 
 jest.mock("../src/functions/factorHelper", () => ({
   factorHelper: jest.fn(),
+}));
+
+jest.mock("../src/functions/types-handler", () => ({
+  handleTypesFunction: jest.fn(),
 }));
 
 
@@ -185,7 +190,13 @@ describe("factor-related functions", () => {
 
   it("factor_search calls factorSearch with correct arguments", async () => {
     const result = await api.factor_search("electricity", "usa","new york","10/10/2020");
-    expect(mockedFactorSearch).toHaveBeenCalledWith("electricity", "usa","new york","10/10/2020");
+    expect(mockedFactorSearch).toHaveBeenCalledWith("electricity", "usa","new york","10/10/2020", undefined, undefined);
+    expect(result).toEqual([["search-result"]]);
+  });
+
+  it("factor_search calls factorSearch with pagination parameters", async () => {
+    const result = await api.factor_search("electricity", "usa", "new york", "10/10/2020", 2, 50);
+    expect(mockedFactorSearch).toHaveBeenCalledWith("electricity", "usa", "new york", "10/10/2020", 2, 50);
     expect(result).toEqual([["search-result"]]);
   });
 
@@ -199,5 +210,69 @@ describe("factor-related functions", () => {
     const result = await api.factor_by_id(123, "kg");
     expect(mockedFactorHelper).toHaveBeenCalledWith(123, "kg");
     expect(result).toEqual([["helper-result"]]);
+  });
+});
+
+describe("types function", () => {
+  const mockedHandleTypesFunction = handleTypesFunction as jest.MockedFunction<typeof handleTypesFunction>;
+
+  beforeEach(() => {
+    mockedHandleTypesFunction.mockResolvedValue("location");
+  });
+
+  it("should call handleTypesFunction with correct arguments", async () => {
+    const mockInvocation = {
+      address: "Sheet1!A1",
+    } as CustomFunctions.Invocation;
+
+    const result = await api.types("location", mockInvocation);
+
+    expect(mockedHandleTypesFunction).toHaveBeenCalledWith("location", mockInvocation);
+    expect(result).toBe("location");
+  });
+
+  it("should handle different API names", async () => {
+    const mockInvocation = {
+      address: "Sheet1!B2",
+    } as CustomFunctions.Invocation;
+
+    mockedHandleTypesFunction.mockResolvedValue("mobile");
+    const result = await api.types("mobile", mockInvocation);
+
+    expect(mockedHandleTypesFunction).toHaveBeenCalledWith("mobile", mockInvocation);
+    expect(result).toBe("mobile");
+  });
+
+  it("should handle factor API name", async () => {
+    const mockInvocation = {
+      address: "Sheet1!C3",
+    } as CustomFunctions.Invocation;
+
+    mockedHandleTypesFunction.mockResolvedValue("factor");
+    const result = await api.types("factor", mockInvocation);
+
+    expect(mockedHandleTypesFunction).toHaveBeenCalledWith("factor", mockInvocation);
+    expect(result).toBe("factor");
+  });
+
+  it("should propagate errors from handleTypesFunction", async () => {
+    const mockInvocation = {
+      address: "Sheet1!A1",
+    } as CustomFunctions.Invocation;
+
+    mockedHandleTypesFunction.mockRejectedValue(new Error("Validation error"));
+
+    await expect(api.types("invalid", mockInvocation)).rejects.toThrow("Validation error");
+  });
+
+  it("should pass invocation object correctly", async () => {
+    const mockInvocation = {
+      address: "Sheet2!D10",
+      parameterAddresses: [],
+    } as CustomFunctions.Invocation;
+
+    await api.types("calculation", mockInvocation);
+
+    expect(mockedHandleTypesFunction).toHaveBeenCalledWith("calculation", mockInvocation);
   });
 });

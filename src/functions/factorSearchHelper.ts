@@ -9,7 +9,9 @@ function buildFactorSearchParams(
   search: string,
   country: string,
   stateProvince?: string,
-  date?: string
+  date?: string,
+  page?: number,
+  size?: number
 ): any {
   const params: any = {
     activity: { search },
@@ -25,11 +27,10 @@ function buildFactorSearchParams(
     params.time = { date: formattedDate };
   }
 
-  
-    params.pagination = {};
-    params.pagination.page = 1;
-    params.pagination.size = 30;
-  
+  params.pagination = {
+    page: page || 1,
+    size: size || 30
+  };
 
   return params;
 }
@@ -37,40 +38,45 @@ function buildFactorSearchParams(
 
 
 function formatFactorSearchResponse(response: any): (string | number | null)[][] {
-  return response.factors.map((factor: any) => [
-    factor.factorSet ?? "",
-    factor.source ?? "",
-    factor.activityType ?? "",
-    factor.activityUnit ?? "",
-    factor.region ?? "",
-    factor.factorId ?? ""
-  ]);
+  return response.factors.map((factor: any) => {
+    // Handle activityUnit as array (join with ", " to maintain single column)
+    const activityUnit = Array.isArray(factor.activityUnit)
+      ? factor.activityUnit.join(", ")
+      : (factor.activityUnit ?? "");
+    
+    return [
+      factor.factorSet ?? "",
+      factor.source ?? "",
+      factor.activityType ?? "",
+      activityUnit,
+      factor.region ?? "",
+      factor.factorId ?? ""
+    ];
+  });
 }
 
 export async function factorSearch(
   search: string,
   country: string,
   stateProvince?: string,
-  date?: string
+  date?: string,
+  page?: number,
+  size?: number
 ): Promise<any[][]> {
   try {
     await ensureClient();
 
-    const apiParams = buildFactorSearchParams(search, country, stateProvince, date);
+    const apiParams = buildFactorSearchParams(search, country, stateProvince, date, page, size);
 
-    const rawResponse = await Factor.search(apiParams);
+    const response = await Factor.search(apiParams);
 
-  const response =
-    typeof rawResponse === "string"
-      ? JSON.parse(rawResponse)
-      : rawResponse;
 
-  if (!response || !Array.isArray(response.factors)) {
-    throw new CustomFunctions.Error(
-      CustomFunctions.ErrorCode.notAvailable,
-      "Invalid API response structure: Missing 'factors' array"
-    );
-  }
+    if (!response || !Array.isArray(response.factors)) {
+      throw new CustomFunctions.Error(
+        CustomFunctions.ErrorCode.notAvailable,
+        "Invalid API response structure: Missing 'factors' array"
+      );
+    }
 
     return formatFactorSearchResponse(response);
   } catch (e: any) {
