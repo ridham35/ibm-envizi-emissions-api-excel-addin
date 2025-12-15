@@ -1,6 +1,6 @@
 {
   "name": "ibm-envizi-emissions-api-excel-addin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/ibm-envizi-emissions-api-excel-addin"
@@ -30,7 +30,7 @@
     "axios": "^1.10.0",
     "buffer": "^6.0.3",
     "core-js": "^3.36.0",
-    "emissions-api-sdk": "1.0.0",
+    "emissions-api-sdk": "1.0.2",
     "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {

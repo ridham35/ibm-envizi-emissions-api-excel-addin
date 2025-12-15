@@ -9,6 +9,7 @@ IBM Envizi for Excel Documentation
    installation
    use
    reference
+   troubleshooting
 
 
 Introduction

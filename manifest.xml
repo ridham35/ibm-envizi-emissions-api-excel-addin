@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>90ef193d-e53e-4f93-b280-39e2dc609661</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.2</Version>
   <ProviderName>IBM</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="IBM Envizi Emissions API"/>
   <Description DefaultValue="Seamlessly integrate emissions data into your workflows."/>
   <IconUrl DefaultValue="https://localhost:8000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:8000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.ibm.com/mysupport"/>
+  <SupportUrl DefaultValue="mailto:enviziemissionsapi@ibm.com"/>
   <AppDomains>
     <AppDomain>https://plugins.app.ibm.com</AppDomain>
   </AppDomains>
