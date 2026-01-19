@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Microsoft Marketplace" href="install-appstore.html"><link rel="prev" title="IBM Envizi for Excel Documentation" href="index.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Using Manifest File" href="install-manifest.html"><link rel="prev" title="Installation" href="installation.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Installation - IBM Envizi for Excel documentation</title>
+        <title>Microsoft Marketplace - IBM Envizi for Excel documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -193,8 +193,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Installation</a><input aria-label="Toggle navigation of Installation" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html">Microsoft Marketplace</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="installation.html">Installation</a><input aria-label="Toggle navigation of Installation" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Microsoft Marketplace</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="install-manifest.html">Using Manifest File</a><input aria-label="Toggle navigation of Using Manifest File" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="online.html">Office 365 - Online</a></li>
 <li class="toctree-l3"><a class="reference internal" href="windows.html">Windows</a></li>
@@ -226,7 +226,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="_sources/installation.rst.txt" title="View this page">
+  <a class="muted-link" href="_sources/install-appstore.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -244,82 +244,75 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
-<section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
-<p>Before installing the add-in, ensure the following requirements are met:</p>
-<ul class="simple">
-<li><p>Microsoft Excel (Office 365 Online, Mac or Windows)</p></li>
-<li><p>Active internet connection</p></li>
-<li><p>API credentials (<code class="docutils literal notranslate"><span class="pre">apiKey</span></code>, <code class="docutils literal notranslate"><span class="pre">tenantId</span></code>, <code class="docutils literal notranslate"><span class="pre">orgId</span></code>), are available on the <a class="reference external" href="https://www.app.ibm.com/envizi/emissions-api-home/overview?cuiURL=%2Femissions-api-home%2Foverview">Overview Dashboard</a> after <a class="reference external" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-53999">sign up</a>.</p></li>
-</ul>
-</section>
-<section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
-<p>In order to use <strong>IBM Envizi Emissions API</strong> for Excel, there are two options to install:</p>
+          <section id="microsoft-marketplace">
+<h1>Microsoft Marketplace<a class="headerlink" href="#microsoft-marketplace" title="Link to this heading">¶</a></h1>
+<p>This guide explains how to install the <strong>IBM Envizi Emissions API</strong> add-in from the Microsoft Marketplace on <strong>macOS</strong>.</p>
+<p>The <strong>IBM Envizi Emissions API</strong> add-in is now available on the Microsoft Marketplace. This is the recommended installation method as it provides automatic updates and simplified installation.</p>
+<section id="step-1-locate-add-ins-in-excel">
+<h2>Step 1: Locate Add-ins in Excel<a class="headerlink" href="#step-1-locate-add-ins-in-excel" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Install from the Microsoft Marketplace (Recommended)</p></li>
-<li><p>Sideload using a manifest.xml file</p></li>
+<li><p>Launch <strong>Microsoft Excel</strong> on your Mac.</p></li>
+<li><p>Look for <strong>Add-ins</strong> in the Excel ribbon (typically under the <strong>Home</strong> tab).</p></li>
+<li><p>Click the <strong>Add-ins</strong> button in the toolbar.</p></li>
 </ol>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="install-appstore.html">Microsoft Marketplace</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html#step-1-locate-add-ins-in-excel">Step 1: Locate Add-ins in Excel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html#step-2-install-the-add-in">Step 2: Install the Add-in</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html#step-3-verify-installation">Step 3: Verify Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install-appstore.html#next-steps">Next Steps</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="install-manifest.html">Using Manifest File</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install-manifest.html#download-the-manifest-file">Download the Manifest File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install-manifest.html#platform-specific-installation">Platform-Specific Installation</a></li>
-</ul>
-</li>
-</ul>
+<img alt="Insert tab with Get Add-ins button on Mac" class="align-center" src="_images/appstore-ribbon-addin.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The button may be labeled as <strong>Get Add-ins</strong> or <strong>Add-ins</strong> depending on your Excel version.</p>
 </div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Note that Excel custom functions are available on the following platforms:</p>
+</section>
+<section id="step-2-install-the-add-in">
+<h2>Step 2: Install the Add-in<a class="headerlink" href="#step-2-install-the-add-in" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>In the search box of the Add-ins dialog box, type <strong>IBM Envizi - Emissions calculation</strong> and press <strong>Enter</strong>.</p></li>
+<li><p>Locate <strong>IBM Envizi - Emissions Calculation in Excel</strong> in the search results.</p></li>
+<li><p>Click on the add-in to view its details, then click the <strong>Add</strong> button to install the add-in.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/appstore-search.png"><img alt="Searching for IBM Envizi Emissions API in the store" class="align-center" src="_images/appstore-search.png" style="height: 400px;" />
+</a>
+</section>
+<section id="step-3-verify-installation">
+<h2>Step 3: Verify Installation<a class="headerlink" href="#step-3-verify-installation" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Once installed, the <strong>IBM Envizi Emissions API</strong> button will appear in the Excel ribbon (typically under the <strong>Home</strong> tab).</p></li>
+<li><p>Click the button to open the add-in task pane and start using it.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/appstore-installed.png"><img alt="Installed add-in in Excel ribbon on Mac" class="align-center" src="_images/appstore-installed.png" style="height: 600px;" />
+</a>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Office on the web</p></li>
 <li><dl class="simple">
-<dt>Office on Windows</dt><dd><ul>
-<li><p>Microsoft 365 subscription</p></li>
-<li><p>Retail perpetual <strong>Office 2016 and later</strong></p></li>
-<li><p>Volume-licensed perpetual <strong>Office 2021 and later</strong></p></li>
+<dt><strong>Add-in not appearing in search results</strong></dt><dd><ul>
+<li><p>Ensure you have an active internet connection.</p></li>
+<li><p>Check that you are signed in to your Microsoft account.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Office on Mac</p></li>
+<li><dl class="simple">
+<dt><strong>Installation fails</strong></dt><dd><ul>
+<li><p>Verify that you have the necessary permissions to install add-ins.</p></li>
+<li><p>Contact your IT administrator if you are on a managed device.</p></li>
 </ul>
-<p>Excel custom functions aren’t currently supported in the following:</p>
-<ul class="simple">
-<li><p>Office on iPad</p></li>
-<li><p>Volume-licensed perpetual versions of <strong>Office 2019 or earlier</strong> on Windows</p></li>
-</ul>
-<p>For more information, see <a class="reference external" href="https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview">Supported platforms</a>.</p>
-</div>
-</section>
-<section id="calculation-mode-tip">
-<h2>Calculation Mode Tip<a class="headerlink" href="#calculation-mode-tip" title="Link to this heading">¶</a></h2>
-<p>After installation, change the calculation mode to <strong>Manual</strong> to prevent unnecessary API calls:</p>
-<ol class="arabic simple">
-<li><p>Go to <strong>Formulas → Calculation Options</strong>.</p></li>
-<li><p>Select <strong>Manual</strong>.</p></li>
-</ol>
-<img alt="Manual calculation mode in Excel" class="align-center" src="_images/calculation.png" />
-<ol class="arabic simple" start="3">
-<li><p>To recalculate a formula in manual calculation mode either press <strong>F9</strong> or do the following:</p>
-<ul class="simple">
-<li><p>Select the cell</p></li>
-<li><p>Press F2 (this puts the cell into edit mode)</p></li>
-<li><p>Press Enter</p></li>
-</ul>
+</dd>
+</dl>
 </li>
-</ol>
+<li><dl class="simple">
+<dt><strong>Add-in button not visible after installation</strong></dt><dd><ul>
+<li><p>Restart Excel.</p></li>
+<li><p>Check the <strong>Home</strong> tab or <strong>Insert</strong> tab for the add-in button.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
+<p>After installation, please refer to the <a class="reference internal" href="installation.html"><span class="doc">Calculation Mode Tip</span></a> section for optimizing your Excel configuration.</p>
+<p>Follow <a class="reference internal" href="use.html"><span class="doc">Usage</span></a> documentation for next steps.</p>
 </section>
 </section>
 
@@ -328,23 +321,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="install-appstore.html">
+          <a class="next-page" href="install-manifest.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Microsoft Marketplace</div>
+                <div class="title">Using Manifest File</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="installation.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Installation</div>
                 
               </div>
             </a>
@@ -378,10 +371,12 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#install">Install</a></li>
-<li><a class="reference internal" href="#calculation-mode-tip">Calculation Mode Tip</a></li>
+<li><a class="reference internal" href="#">Microsoft Marketplace</a><ul>
+<li><a class="reference internal" href="#step-1-locate-add-ins-in-excel">Step 1: Locate Add-ins in Excel</a></li>
+<li><a class="reference internal" href="#step-2-install-the-add-in">Step 2: Install the Add-in</a></li>
+<li><a class="reference internal" href="#step-3-verify-installation">Step 3: Verify Installation</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#next-steps">Next Steps</a></li>
 </ul>
 </li>
 </ul>
